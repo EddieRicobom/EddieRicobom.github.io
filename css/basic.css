@@ -145,7 +145,7 @@ img {
     background-color: rgba(0, 0, 0, 0.84);
     background-image: linear-gradient(62deg, #3a3d40 0%, rgb(23, 25, 25) 100%);
     /*clip-path: polygon(0 0, 100% 0, 100% 100%, 0 59%);*/
-    z-index: -1;
+    z-index: -3;
 
 }
 
@@ -157,15 +157,31 @@ img {
     text-shadow: white;
 }
 
-/* Projects section */
+.goog-te-banner-frame .skiptranslate{
+z-index: -40403 !important;}
 
 .projects-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
     text-align: center;
     padding: 10rem 2rem;
-    background: var(--main-blue);
+    background: rgba(153, 142, 142, 0.09);
+}
+
+.bg-projects{
+    position: absolute;
+    background-image: url('../resources/desk1.jpg');
+    width: 100%;
+    height: 100vh;
+    z-index: -2;
 }
 
 .projects-section-header {
+    z-index: 4;
     max-width: 640px;
     margin: 0 auto 6rem auto;
     border-bottom: 0.2rem solid var(--main-white);
