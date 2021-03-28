@@ -1,5 +1,5 @@
 const image = new Image();
-image.src='resources/card2.png';
+image.src='resources/circuits.jpg';
 image.addEventListener('load', function(){
     const canvas = document.getElementById('welcome_bg');
     const ctx = canvas.getContext('2d');

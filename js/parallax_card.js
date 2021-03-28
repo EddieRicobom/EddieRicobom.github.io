@@ -11,7 +11,7 @@ $(function() {
         let halfWidth = window.innerWidth / 2
         let halfHeight = window.innerHeight / 2
         let xdeg = (mouseX - halfWidth) / halfWidth;
-        let ydeg = (mouseY - halfHeight) / halfHeight;
+        let ydeg = -(mouseY - halfHeight) / halfHeight;
         updateReflection(ydeg * 180, xdeg * 100)
         card.style.transform = `rotateX(${ydeg * 10}deg) rotateY(${xdeg * 10}deg)`;
     })
