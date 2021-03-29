@@ -7,9 +7,9 @@
 
 
 .wrapper{
-    width: 90%;
+    width: 95%;
     margin: 0 auto;
-    max-width: 80rem;
+    max-width: 100%;
 }
 
 .cols{
@@ -24,7 +24,7 @@
 }
 
 .col{
-    width: calc(25% - 2rem);
+    width: calc(16% - 2rem);
     margin: 1rem;
     cursor: pointer;
 }
@@ -50,7 +50,7 @@
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
     text-align: center;
-    min-height: 280px;
+    min-height: 260px;
     height: auto;
     border-radius: 10px;
     color: #fff;
@@ -74,7 +74,7 @@
     content: '';
     display: block;
     opacity: .6;
-    background-color: #000;
+    background-color: rgba(0, 0, 0, 0.38);
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
     border-radius: 10px;
@@ -109,6 +109,9 @@
     -webkit-perspective: inherit;
     perspective: inherit;
     z-index: 2;
+    z-index: 2;
+    font-weight: bold;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.89);
 }
 
 .container .back{
