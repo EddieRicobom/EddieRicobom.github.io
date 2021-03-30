@@ -1,6 +1,6 @@
 $(function() {
 
-    var imgUrl = "resources/welcome.jpg"
+    var imgUrl = "resources/cards/testgif.gif"
     var card = document.getElementById("reflexcard");
     updateReflection(100, 0)
 
@@ -29,7 +29,7 @@ $(function() {
 
 
     function updateReflection(degree, percentage) {
-        card.style.background = `linear-gradient(${degree}deg, rgba(255,255,255,0) 0%,rgba(255,255,255,0.5) ${percentage}%,rgba(255,255,255,0) 100%), url('${imgUrl}')`
+        card.style.background = `linear-gradient(${degree}deg, rgba(150,150,150,0) 0%,rgba(150,150,150,0.5) ${percentage}%,rgba(150,150,150,0) 100%), url('${imgUrl}')`
         card.style.backgroundSize = "cover"
     }
 
