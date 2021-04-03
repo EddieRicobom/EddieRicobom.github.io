@@ -1,0 +1,19 @@
+@keyframes slidy {
+    0% { left: 0%; }
+    50% { left:  -100%; }
+    100% { left: 0%; }
+}
+
+body { margin: 0; width: auto; max-width: 100%}
+div.slider { overflow: hidden; }
+div.slider figure img { width: auto; float: left; }
+div.slider figure {
+    position: relative;
+    width: 300%;
+    height: 100%;
+    margin: 0;
+    left: 0;
+    text-align: left;
+    font-size: 0;
+    animation: 20s slidy infinite;
+}
