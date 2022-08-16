@@ -29,7 +29,7 @@ $(function() {
 
 
     function updateReflection(degree, percentage) {
-        card.style.background = `linear-gradient(${degree}deg, rgba(82,82,82,0) 0%,rgba(82,82,82,0.2) ${percentage}%,rgba(82,82,82,0) 100%), url('${imgUrl}')`
+        card.style.background = `linear-gradient(${degree}deg, rgba(51,51,51,0) 0%,rgba(51,51,51,0.2) ${percentage}%,rgba(51,51,51,0) 100%), url('${imgUrl}')`
         card.style.backgroundSize = "cover"
     }
 
