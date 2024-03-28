@@ -1,25 +1,45 @@
-
 .reflexcard {
-    padding-top: 87px;
     height: 360px;
     width: 660px;
     border-radius: 15px;
     box-shadow: 0px 0px 20px -10px rgba(255, 255, 255, 0.25);
     -webkit-animation: slide 10s linear infinite;
     border: 2px outset rgba(255, 249, 0 ,0.5);
+    transform-style: preserve-3d;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
 
+.reflexcard h1,
+.reflexcard h2 {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.72); /* Add shadow to text */
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+    margin: 0;
+}
+
+.reflexcard-content {
+    position: relative;
+    backface-visibility: hidden; /* Hides the backface of the element */
+}
 
 @media only screen and (max-width: 700px) {
     .reflexcard {
-        height: 180px;
-        width: 300px;
+        height: 300px;
+        width: 400px;
         border-radius: 5px;
+    }
+    .reflexcard h1,
+    .reflexcard h2 {
+        font-size: 200%;
     }
 }
 
-/* ref https://blog.logrocket.com/the-noobs-guide-to-3d-transforms-with-css-7370aafd9edf/ */
-
+/* Add this class to the parent element of your card */
 .scene {
-    perspective: 30em;
+    perspective: 30em; /* Adjust the perspective value as needed */
+    transform-style: preserve-3d; /* Ensures that child elements maintain their 3D position */
 }

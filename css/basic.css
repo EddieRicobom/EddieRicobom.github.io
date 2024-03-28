@@ -1,4 +1,4 @@
-/* Custom properties/variables  */
+/* Custom properties/variables */
 :root {
     --main-white: #f0f0f0;
     --main-red: #be3144;
@@ -21,45 +21,25 @@
 
 html {
     box-sizing: border-box;
-    font-family:courier,arial,helvetica;
-    /* Set font size for easy rem calculations
-     * default document font size = 16px, 1rem = 16px, 100% = 16px
-     * (100% / 16px) * 10 = 62.5%, 1rem = 10px, 62.5% = 10px
-    */
-    font-size: 62.5%;
+    font-family: courier, arial, helvetica;
+    /* Set font size for easy rem calculations */
+    font-size: 62.5%; /* 1rem = 10px, 62.5% = 10px */
     scroll-behavior: smooth;
 }
 
-/* A few media query to set some font sizes at different screen sizes.
- * This helps automate a bit of responsiveness.
- * The trick is to use the rem unit for size values, margin and padding.
- * Because rem is relative to the document font size
- * when we scale up or down the font size on the document
- * it will affect all properties using rem units for the values.
-*/
-
-/* I am using the em unit for breakpoints
- * The calculation is the following
- * screen size divided by browser base font size
- * As an example: a breakpoint at 980px
- * 980px / 16px = 61.25em
-*/
-
-/* 1200px / 16px = 75em */
+/* A few media query to set some font sizes at different screen sizes */
 @media (max-width: 75em) {
     html {
         font-size: 60%;
     }
 }
 
-/* 980px / 16px = 61.25em */
 @media (max-width: 61.25em) {
     html {
         font-size: 58%;
     }
 }
 
-/* 460px / 16px = 28.75em */
 @media (max-width: 28.75em) {
     html {
         font-size: 55%;
@@ -67,7 +47,6 @@ html {
 }
 
 /* Base styles */
-
 body {
     font-family: 'Poppins', sans-serif;
     font-size: 1.8rem; /* 18px */
@@ -78,9 +57,7 @@ body {
     justify-content: center;
 }
 
-h1,
-h2,
-h3 {
+h1, h2, h3 {
     font-family: 'Raleway', sans-serif;
     font-weight: 700;
     text-align: center;
@@ -108,25 +85,19 @@ img {
     width: 100%;
 }
 
-
 /* Welcome section */
-
 .welcome-section {
-    /*background-image: linear-gradient(62deg, rgb(40, 35, 40) 0%, rgba(109, 67, 127, 0.26) 100%);*/
-/*background-blend-mode: difference;*/
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     width: 100%;
     height: 100vh;
-    }
+}
 
-
-.transparent-text{
+.transparent-text {
     background-color: rgba(101, 31, 170, 0.96);
     color: #000;
-    /* the magic property */
     mix-blend-mode: screen;
     padding: 10px;
 
@@ -169,8 +140,6 @@ z-index: -40403 !important;}
     justify-content: center;
     align-items: center;
     width: 100%;
-    height: 100vh;
-    text-align: center;
     padding: 10rem 2rem;
     background: rgba(153, 142, 142, 0.09);
 }
@@ -185,7 +154,6 @@ z-index: -40403 !important;}
 }
 
 .projects-section-header {
-    z-index: 4;
     max-width: 640px;
     margin: 0 auto 6rem auto;
     border-bottom: 0.2rem solid var(--main-white);
@@ -197,7 +165,6 @@ z-index: -40403 !important;}
     }
 }
 
-/* "Automagic" image grid using no media queries */
 .projects-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
@@ -271,7 +238,6 @@ z-index: -40403 !important;}
 }
 
 /* Contact section */
-
 .contact-section {
     display: flex;
     flex-direction: column;
@@ -303,7 +269,6 @@ z-index: -40403 !important;}
     justify-content: center;
     width: 100%;
     max-width: 980px;
-    /*margin-top: 4rem;*/
     margin-top: 40px;
     flex-wrap: wrap;
 }
@@ -319,7 +284,6 @@ z-index: -40403 !important;}
 }
 
 /* Footer */
-
 footer {
     font-weight: 300;
     display: flex;
@@ -344,7 +308,7 @@ footer i {
     }
 }
 
-#welcome_bg{
+#welcome_bg {
     background-image: url("../resources/backgroundslick.jpg");
     background-repeat: no-repeat;
     background-size: cover;
