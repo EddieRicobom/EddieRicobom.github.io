@@ -44,6 +44,8 @@
     -webkit-transform: scale(1.2) translate(0, -10%) translateZ(50px);
     transform: scale(1.2) translate(0, -10%) translateZ(50px);
     z-index: 99;
+    font-size: 1.6rem;
+
 }
 
 .front,
