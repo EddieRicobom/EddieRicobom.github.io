@@ -25,19 +25,19 @@ html {
 /* Responsive font size adjustments */
 @media (max-width: 75em) {
     html {
-        font-size: 70%;
+        font-size: 60%;
     }
 }
 
 @media (max-width: 61.25em) {
     html {
-        font-size: 65%;
+        font-size: 55%;
     }
 }
 
 @media (max-width: 28.75em) {
     html {
-        font-size: 65%;
+        font-size: 50%;
     }
 }
 
