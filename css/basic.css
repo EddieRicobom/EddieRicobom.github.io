@@ -25,19 +25,19 @@ html {
 /* Responsive font size adjustments */
 @media (max-width: 75em) {
     html {
-        font-size: 60%;
+        font-size: 70%;
     }
 }
 
 @media (max-width: 61.25em) {
     html {
-        font-size: 58%;
+        font-size: 65%;
     }
 }
 
 @media (max-width: 28.75em) {
     html {
-        font-size: 55%;
+        font-size: 65%;
     }
 }
 
@@ -132,7 +132,7 @@ img {
     position: absolute;
     background-image: url('../resources/desk1.jpg');
     width: 100%;
-    height: 170vh;
+    height: 170vh !important;
     background-size: cover;
     background-position: center;
     z-index: -2;
@@ -160,7 +160,7 @@ img {
     margin-bottom: 6rem;
 }
 
-@media (max-width: 30.625em) {
+@media (max-width: 980px) {
     .projects-section {
         padding: 2rem 1rem;
     }
@@ -169,10 +169,10 @@ img {
         grid-template-columns: 1fr;
     }
     .bg-projects {
-        height: 100vh;
+        height: 100vh !important;
     }
     .bgwelcome {
-        height: 50vh;
+        height: 100vh;
     }
 }
 
