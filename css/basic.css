@@ -131,8 +131,6 @@ img {
     text-shadow: white;
 }
 
-.goog-te-banner-frame .skiptranslate{
-z-index: -40403 !important;}
 
 .projects-section {
     display: flex;
@@ -163,6 +161,7 @@ z-index: -40403 !important;}
     .projects-section-header {
         font-size: 4rem;
     }
+
 }
 
 .projects-grid {
@@ -177,11 +176,18 @@ z-index: -40403 !important;}
 
 @media (max-width: 30.625em) {
     .projects-section {
-        padding: 6rem 1rem;
+        padding: 2rem 1rem;
     }
 
     .projects-grid {
         grid-template-columns: 1fr;
+    }
+    .bg-projects{
+        height: 100vh;
+    }
+    .bgwelcome{
+        height: 50vh;
+
     }
 }
 
