@@ -6,28 +6,23 @@
     --main-gray: #303841;
 }
 
-/* Base reset */
-* {
-    margin: 0;
-    padding: 0;
-}
-
-/* box-sizing and font sizing */
+/* Base reset and box-sizing */
 *,
 *::before,
 *::after {
+    margin: 0;
+    padding: 0;
     box-sizing: inherit;
 }
 
 html {
     box-sizing: border-box;
     font-family: courier, arial, helvetica;
-    /* Set font size for easy rem calculations */
     font-size: 62.5%; /* 1rem = 10px, 62.5% = 10px */
     scroll-behavior: smooth;
 }
 
-/* A few media query to set some font sizes at different screen sizes */
+/* Responsive font size adjustments */
 @media (max-width: 75em) {
     html {
         font-size: 60%;
@@ -100,25 +95,18 @@ img {
     color: #000;
     mix-blend-mode: screen;
     padding: 10px;
-
 }
 
-.welcome-text-bg{
-    /*background-color: rgba(101, 31, 170, 0.96);*/
-
-
-}
-
-.bgwelcome{
+.bgwelcome {
     position: fixed;
     width: 100%;
     height: 100vh;
     background-color: rgba(0, 0, 0, 0.84);
     background-image: linear-gradient(62deg, #3a3d40 0%, rgb(23, 25, 25) 100%);
-    /*clip-path: polygon(0 0, 100% 0, 100% 100%, 0 59%);*/
+    background-size: cover;
+    background-position: center;
     z-index: -3;
 }
-
 
 .welcome-section > p {
     font-size: 3rem;
@@ -128,7 +116,7 @@ img {
     text-shadow: white;
 }
 
-
+/* Projects section */
 .projects-section {
     display: flex;
     flex-direction: column;
@@ -139,12 +127,14 @@ img {
     background: rgba(153, 142, 142, 0.09);
 }
 
-.bg-projects{
-    box-shadow:  0px -1px 28px 10px rgba(0,0,0,0.76);
+.bg-projects {
+    box-shadow: 0px -1px 28px 10px rgba(0, 0, 0, 0.76);
     position: absolute;
     background-image: url('../resources/desk1.jpg');
     width: 100%;
     height: 170vh;
+    background-size: cover;
+    background-position: center;
     z-index: -2;
 }
 
@@ -158,7 +148,6 @@ img {
     .projects-section-header {
         font-size: 4rem;
     }
-
 }
 
 .projects-grid {
@@ -179,12 +168,11 @@ img {
     .projects-grid {
         grid-template-columns: 1fr;
     }
-    .bg-projects{
+    .bg-projects {
         height: 100vh;
     }
-    .bgwelcome{
+    .bgwelcome {
         height: 50vh;
-
     }
 }
 
@@ -315,4 +303,5 @@ footer i {
     background-image: url("../resources/backgroundslick.jpg");
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: center;
 }
