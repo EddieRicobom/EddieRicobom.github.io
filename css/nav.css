@@ -1,6 +1,4 @@
 
-/* Navbar section */
-
 .nav {
     width: 100%;
     height: 65px;
@@ -45,7 +43,8 @@
     width: auto;
     height: 65px;
     padding: 0;
-    padding-right: 3rem;
+    padding-right: 15rem; /* Adjust padding-right value */
+    max-width: 300px; /* Set a maximum width */
 }
 
 .nav div.main_list ul li a {
@@ -58,18 +57,6 @@
 .nav div.main_list ul li a:hover {
     color: #00E676;
 }
-
-
-/* Home section */
-
-.home {
-    width: 100%;
-    height: 100vh;
-    background-image: url(https://images.unsplash.com/photo-1498550744921-75f79806b8a7?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=b0f6908fa5e81286213c7211276e6b3d&auto=format&fit=crop&w=1500&q=80);
-    background-position: center top;
-    background-size:cover;
-}
-
 
 .nav {
     padding-top: 20px;
@@ -226,25 +213,4 @@
 .affix {
     padding: 0;
     background-color: rgba(97, 27, 114, 0.97);
-}
-
-
-
-
-
-
-.myH2 {
-    text-align:center;
-    font-size: 4rem;
-}
-.myP {
-    text-align: justify;
-    padding-left:15%;
-    padding-right:15%;
-    font-size: 20px;
-}
-@media all and (max-width:700px){
-    .myP {
-        padding:2%;
-    }
 }
