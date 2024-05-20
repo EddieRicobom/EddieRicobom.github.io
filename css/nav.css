@@ -43,7 +43,7 @@
     width: auto;
     height: 65px;
     padding: 0;
-    padding-right: 15rem; /* Adjust padding-right value */
+    padding-right: 15rem !important; /* Adjust padding-right value */
     max-width: 300px; /* Set a maximum width */
 }
 
