@@ -299,7 +299,7 @@ footer i {
     }
 }
 
-#welcome_bg {
+.bgwelcome {
     background-image: url("../resources/backgroundslick.jpg");
     background-repeat: no-repeat;
     background-size: cover;
