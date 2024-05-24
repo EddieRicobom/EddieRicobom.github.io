@@ -132,7 +132,7 @@ img {
     position: absolute;
     background-image: url('../resources/desk1.jpg');
     width: 100%;
-    height: 170vh !important;
+    height: 220vh !important;
     background-size: cover;
     background-position: center;
     z-index: -2;
@@ -169,7 +169,7 @@ img {
         grid-template-columns: 1fr;
     }
     .bg-projects {
-        height: 100vh !important;
+        height: 110vh !important;
     }
     .bgwelcome {
         height: 100vh;
