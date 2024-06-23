@@ -10,8 +10,11 @@
 <link href="TEA/js/TEA.js" rel="stylesheet"/>
 
 <script>
+    // Define your salt (choose a long random string)
+    const salt = "MySecretSalt";
+
     async function sha256(message) {
-        const msgBuffer = new TextEncoder().encode(message);
+        const msgBuffer = new TextEncoder().encode(message + salt); // Append salt to the message
         const hashBuffer = await crypto.subtle.digest('SHA-256', msgBuffer);
         const hashArray = Array.from(new Uint8Array(hashBuffer));
         const hashHex = hashArray.map(b => b.toString(16).padStart(2, '0')).join('');
@@ -22,9 +25,10 @@
         const userInput = document.getElementById('code-input').value.trim();
         const hashInput = await sha256(userInput);
 
-        // Substitua o hash abaixo pelo hash do código que você deseja usar
+        // Replace the following line with actual hashed code to compare against
+        const expectedHash = "c8a91d576bc7e9b2e693f8f4e0cb63e5f2ab5e688ba7e9e112c03c3c1e7f5d4d"; // Example hashed code
 
-        if (hashInput === correctHash) {
+        if (hashInput === expectedHash) {
             document.getElementById('access-form').style.display = 'none';
             document.getElementById('content').style.display = 'block';
         } else {
@@ -33,15 +37,15 @@
     }
 </script>
 <body>
-    <div id="content" style="display: none;">
-        <h1>Conteúdo Protegido</h1>
-        <p>hi uddy</p>
-    </div>
-    <div id="access-form">
-        <label for="code-input">Digite o código:</label>
-        <input type="text" id="code-input">
-        <button onclick="checkCode()">Verificar</button>
-        <p id="error-message" style="color: red; display: none;">Código incorreto.</p>
-    </div>
+<div id="content" style="display: none;">
+    <h1>Conteúdo Protegido</h1>
+    <p>Seu conteúdo protegido aqui.</p>
+</div>
+<div id="access-form">
+    <label for="code-input">Digite o código:</label>
+    <input type="text" id="code-input">
+    <button onclick="checkCode()">Verificar</button>
+    <p id="error-message" style="color: red; display: none;">Código incorreto.</p>
+</div>
 </body>
 </html>
