@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conteúdo Protegido</title>
+</head>
+<script src="js/jquery-3.6.0.min.js" type="text/javascript"></script>
+<link href="css/basic.css" rel="stylesheet"/>
+
+<script>
+    async function sha256(message) {
+        const msgBuffer = new TextEncoder().encode(message);
+        const hashBuffer = await crypto.subtle.digest('SHA-256', msgBuffer);
+        const hashArray = Array.from(new Uint8Array(hashBuffer));
+        const hashHex = hashArray.map(b => b.toString(16).padStart(2, '0')).join('');
+        return hashHex;
+    }
+
+    async function checkCode() {
+        const userInput = document.getElementById('code-input').value.trim();
+        const hashInput = await sha256(userInput);
+
+        // Substitua o hash abaixo pelo hash do código que você deseja usar
+
+        if (hashInput === correctHash) {
+            document.getElementById('access-form').style.display = 'none';
+            document.getElementById('content').style.display = 'block';
+        } else {
+            document.getElementById('error-message').style.display = 'block';
+        }
+    }
+</script>
+<body>
+    <div id="content" style="display: none;">
+        <h1>Conteúdo Protegido</h1>
+        <p>hi uddy</p>
+    </div>
+    <div id="access-form">
+        <label for="code-input">Digite o código:</label>
+        <input type="text" id="code-input">
+        <button onclick="checkCode()">Verificar</button>
+        <p id="error-message" style="color: red; display: none;">Código incorreto.</p>
+    </div>
+</body>
+</html>
