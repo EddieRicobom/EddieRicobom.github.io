@@ -1,0 +1,40 @@
+:root{--gx:50%;--gy:50%}
+body{background:#0d0b14}
+/* camadas globais */
+#progress{position:fixed;top:0;left:0;width:100%;height:3px;z-index:100;transform:scaleX(0);transform-origin:left;background:linear-gradient(90deg,#a855f7,#ffe600,#00e5ff)}
+#fx{position:fixed;inset:0;z-index:-1;pointer-events:none}
+#fx2{position:fixed;inset:0;z-index:60;pointer-events:none}
+#spot{position:fixed;inset:0;z-index:55;pointer-events:none;background:radial-gradient(520px circle at var(--sx,50%) var(--sy,50%),rgba(168,85,247,.14),transparent 60%)}
+/* hero */
+.reflexcard h1{background:linear-gradient(90deg,#fff,#ffe600,#a855f7,#00e5ff,#fff);background-size:300% 100%;-webkit-background-clip:text;background-clip:text;color:transparent;text-shadow:none;filter:drop-shadow(0 3px 6px rgba(0,0,0,.7));animation:shine 7s linear infinite}
+@keyframes shine{to{background-position:-300% 0}}
+.projects-section-header{border-image:linear-gradient(90deg,transparent,#a855f7,#ffe600,transparent) 1}
+/* nav */
+.nav.affix{background:rgba(20,10,30,.55);backdrop-filter:blur(14px) saturate(160%);-webkit-backdrop-filter:blur(14px) saturate(160%);box-shadow:0 8px 30px rgba(0,0,0,.35)}
+.nav .navlinks a{position:relative}
+.nav .navlinks a::after{content:'';position:absolute;left:0;bottom:-4px;width:100%;height:2px;background:linear-gradient(90deg,#a855f7,#ffe600);transform:scaleX(0);transform-origin:right;transition:transform .35s}
+.nav .navlinks a:hover::after{transform:scaleX(1);transform-origin:left}
+@media(max-width:700px){.nav div.main_list{float:none;margin:0 auto}.nav div.main_list ul{justify-content:center}.nav div.main_list ul li{padding-right:2.2rem!important}.nav div.main_list ul li:last-child{padding-right:0!important}.nav div.main_list ul li a{font-size:1.8rem}}
+/* cards: revelar, inclinar, virar ao clicar */
+html.js .col{opacity:0;transform:translateY(46px) scale(.94);transition:opacity .8s ease,transform .8s cubic-bezier(.2,.8,.2,1)}
+html.js .col.vis{opacity:1;transform:none}
+.col{outline:none}.col:hover{position:relative;z-index:50}
+.col .container{--rx:0;--ry:0;position:relative;transition:transform .25s ease-out;transform:rotateX(calc(var(--rx)*1deg)) rotateY(calc(var(--ry)*1deg))}
+.col .container:hover{transform:rotateX(calc(var(--rx)*1deg)) rotateY(calc(var(--ry)*1deg)) scale(1.12) translateZ(50px)}
+.col .container:hover .front{transform:rotateY(0)}
+.col .container:hover .back{transform:rotateY(180deg)}
+.col.flipped .container .front,.col.flipped .container:hover .front{transform:rotateY(-180deg)}
+.col.flipped .container .back,.col.flipped .container:hover .back{transform:rotateY(0)}
+.col:focus-visible .front,.col:focus-visible .back{outline:2px solid #ffe600}
+.front::before,.back::before{content:'';position:absolute;inset:0;border-radius:10px;pointer-events:none;z-index:2;opacity:0;transition:opacity .3s}
+.front::before{background:repeating-linear-gradient(115deg,#ff0080,#ffd000 12%,#00ffa2 24%,#00b3ff 36%,#9d00ff 48%,#ff0080 60%);background-size:300% 300%;background-position:var(--mx,var(--gx)) var(--my,var(--gy));mix-blend-mode:color-dodge}
+.back::before{background:radial-gradient(circle at var(--mx,var(--gx)) var(--my,var(--gy)),rgba(255,255,255,.35),transparent 55%)}
+.container:hover .front::before{opacity:.45}.container:hover .back::before{opacity:1}
+.container:hover .front,.container:hover .back{box-shadow:0 0 30px rgba(168,85,247,.6),0 22px 40px rgba(0,0,0,.5)}
+@media(hover:none){.col.vis .front::before{opacity:.3}.col.vis .back::before{opacity:1}}
+/* botões de contato */
+.contact-details{position:relative;margin:1rem;overflow:hidden;border-radius:50px!important;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.18);backdrop-filter:blur(6px);transition:transform .25s ease-out,box-shadow .3s}
+.contact-details::before{content:'';position:absolute;inset:0;opacity:0;transition:opacity .3s;background:radial-gradient(120px circle at var(--bx,50%) var(--by,50%),rgba(255,230,0,.35),transparent 70%)}
+.contact-details:hover{transform:translate(var(--tx,0px),var(--ty,0px));box-shadow:0 10px 30px rgba(168,85,247,.45)}
+.contact-details:hover::before{opacity:1}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
