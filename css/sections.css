@@ -13,7 +13,9 @@
 .ring{position:absolute;inset:0;transform-style:preserve-3d;animation:spin 36s linear infinite}
 @keyframes spin{to{transform:rotateY(360deg)}}
 .ring::before{content:'';position:absolute;left:calc(var(--r)*-1);top:calc(var(--r)*-1);width:calc(var(--r)*2);height:calc(var(--r)*2);border-radius:50%;border:1px solid rgba(255,255,255,.3);box-shadow:0 0 40px rgba(168,85,247,.55),inset 0 0 40px rgba(168,85,247,.35);transform:rotateX(90deg)}
-.ring img{position:absolute;width:64px;height:64px;margin:-32px 0 0 -32px;border-radius:16px;background:rgba(22,12,38,.82);border:1px solid rgba(255,255,255,.35);padding:9px;object-fit:contain;box-shadow:0 0 26px rgba(168,85,247,.9),0 10px 24px rgba(0,0,0,.6);transform:rotateY(calc(var(--i)*30deg)) translateZ(var(--r))}
+@keyframes unspin{from{transform:rotateY(calc(var(--i)*30deg)) translateZ(var(--r)) rotateY(calc(var(--i)*-30deg)) rotateX(14deg)}to{transform:rotateY(calc(var(--i)*30deg)) translateZ(var(--r)) rotateY(calc(var(--i)*-30deg - 360deg)) rotateX(14deg)}}
+@keyframes depth{0%,100%{opacity:1;filter:none}50%{opacity:.3;filter:brightness(.45) blur(1.5px)}}
+.ring img{position:absolute;border-radius:22%;background:radial-gradient(circle at 30% 25%,rgba(255,255,255,.28),rgba(30,15,55,.92) 70%);border:1px solid rgba(255,255,255,.45);object-fit:contain;box-shadow:0 0 30px rgba(168,85,247,.95),0 0 70px rgba(168,85,247,.4),0 14px 28px rgba(0,0,0,.65);animation:unspin 36s linear infinite,depth 36s linear infinite;animation-delay:0s,calc(var(--i)*-3s)}
 @media(max-width:700px){.orbit{--r:195px}.ring img{width:44px;height:44px;margin:-22px 0 0 -22px;padding:6px}}
 /* sobre + túnel */
 .about{position:relative;min-height:120vh;display:flex;align-items:center;justify-content:center;overflow:hidden;background:#07050d}

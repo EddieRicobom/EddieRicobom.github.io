@@ -9,4 +9,4 @@
 .rc-glare{background:radial-gradient(circle at var(--mx) var(--my),rgba(255,255,255,.55),rgba(255,255,255,0) 45%);mix-blend-mode:overlay}
 .reflexcardcontent{transform:translateZ(70px);padding:0 3rem}
 .gyro-btn{position:absolute;bottom:9vh;left:50%;transform:translateX(-50%);z-index:5;padding:1rem 2.2rem;font:inherit;font-size:1.6rem;color:#fff;cursor:pointer;border-radius:50px;border:1px solid rgba(255,255,255,.3);background:rgba(255,255,255,.1);backdrop-filter:blur(8px)}
-@media only screen and (max-width:700px){.reflexcard{height:300px;border-radius:8px}.reflexcard h1{font-size:3.4rem}.reflexcardcontent{padding:0 1.5rem}}
+@media only screen and (max-width:700px){.reflexcard{height:170px;width:68vw;border-radius:10px}.reflexcard h1{font-size:2.3rem}.reflexcardcontent{padding:0 1.2rem}}

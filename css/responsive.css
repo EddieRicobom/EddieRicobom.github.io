@@ -4,8 +4,8 @@ body{overflow-x:hidden;-webkit-text-size-adjust:100%}
 .welcome-section{height:100vh;height:100svh}
 
 /* ===== órbita 3D proporcional à tela (tablet e celular) ===== */
-.orbit{--r:clamp(170px,46vw,470px);--is:clamp(40px,6vw,64px)}
-.ring img{width:var(--is);height:var(--is);margin:calc(var(--is)/-2) 0 0 calc(var(--is)/-2);padding:calc(var(--is)/7)}
+.orbit{--r:clamp(170px,46vw,470px);--is:clamp(60px,6.6vw,96px)}
+.ring img{width:var(--is);height:var(--is);margin:calc(var(--is)/-2) 0 0 calc(var(--is)/-2);padding:calc(var(--is)/6)}
 
 /* ===== touch: sem "hover preso" ===== */
 @media(hover:none){
@@ -23,6 +23,7 @@ body{overflow-x:hidden;-webkit-text-size-adjust:100%}
 
 /* ===== celular ===== */
 @media(max-width:700px){
+  .orbit{--r:40vw;--is:clamp(54px,15vw,84px)}
   /* menu compacto */
   .nav{height:52px;line-height:52px;padding:0}
   .nav div.main_list,.nav div.main_list ul,.nav div.main_list ul li{height:52px}
