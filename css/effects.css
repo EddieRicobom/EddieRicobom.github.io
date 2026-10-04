@@ -6,7 +6,7 @@ body{background:#0d0b14}
 #fx2{position:fixed;inset:0;z-index:60;pointer-events:none}
 #spot{position:fixed;inset:0;z-index:55;pointer-events:none;background:radial-gradient(520px circle at var(--sx,50%) var(--sy,50%),rgba(168,85,247,.14),transparent 60%)}
 /* hero */
-.reflexcard h1{background:linear-gradient(90deg,#fff,#ffe600,#a855f7,#00e5ff,#fff);background-size:300% 100%;-webkit-background-clip:text;background-clip:text;color:transparent;text-shadow:none;filter:drop-shadow(0 3px 6px rgba(0,0,0,.7));animation:shine 7s linear infinite}
+.reflexcard h1{background:linear-gradient(90deg,#fff,#f3e6b3,#fff,#d8c8ff,#fff);background-size:300% 100%;-webkit-background-clip:text;background-clip:text;color:transparent;text-shadow:none;filter:drop-shadow(0 3px 6px rgba(0,0,0,.7));animation:shine 7s linear infinite}
 @keyframes shine{to{background-position:-300% 0}}
 .projects-section-header{border-image:linear-gradient(90deg,transparent,#a855f7,#ffe600,transparent) 1}
 /* nav */

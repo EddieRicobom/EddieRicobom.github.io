@@ -5,7 +5,7 @@
   border:2px outset rgba(255,249,0,.5);
   box-shadow:calc(var(--ry)*-2px) calc(var(--rx)*2px + 24px) 60px -18px rgba(0,0,0,.75),0 0 45px -10px rgba(168,85,247,.6)}
 .rc-foil,.rc-glare{position:absolute;inset:0;border-radius:13px;pointer-events:none}
-.rc-foil{background:repeating-linear-gradient(115deg,#ff0080 0%,#ffd000 12%,#00ffa2 24%,#00b3ff 36%,#9d00ff 48%,#ff0080 60%);background-size:250% 250%;background-position:var(--mx) var(--my);mix-blend-mode:color-dodge;opacity:.25}
+.rc-foil{background:linear-gradient(115deg,transparent 25%,rgba(255,255,255,.55) 45%,rgba(190,150,255,.45) 55%,transparent 75%);background-size:260% 260%;background-position:var(--mx) var(--my);mix-blend-mode:soft-light;opacity:.4}
 .rc-glare{background:radial-gradient(circle at var(--mx) var(--my),rgba(255,255,255,.55),rgba(255,255,255,0) 45%);mix-blend-mode:overlay}
 .reflexcardcontent{transform:translateZ(70px);padding:0 3rem}
 .gyro-btn{position:absolute;bottom:9vh;left:50%;transform:translateX(-50%);z-index:5;padding:1rem 2.2rem;font:inherit;font-size:1.6rem;color:#fff;cursor:pointer;border-radius:50px;border:1px solid rgba(255,255,255,.3);background:rgba(255,255,255,.1);backdrop-filter:blur(8px)}
