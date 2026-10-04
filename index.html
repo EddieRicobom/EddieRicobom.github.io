@@ -15,6 +15,8 @@
 <link href="css/parallaxCard.css" rel="stylesheet" />
 <link href="css/turnCards.css" rel="stylesheet" />
 <link href="css/effects.css" rel="stylesheet" />
+<link href="css/sections.css" rel="stylesheet" />
+<script src="js/sections.js" defer></script>
 <script src="js/effects.js" defer></script>
 <script src="js/basic.js"></script>
 <script src="js/parallax_card.js"></script>
@@ -27,7 +29,8 @@
         <div class="container">
             <div id="mainListDiv" class="main_list">
                 <ul class="navlinks">
-                    <li><a href="#">Sobre</a></li>
+                    <li><a href="#about">Sobre</a></li>
+                    <li><a href="#areas">Áreas</a></li>
                     <li><a href="#projects">Skills</a></li>
                     <li><a href="#contact">Contato</a></li>
                 </ul>
@@ -54,6 +57,18 @@
 
 
 
+    <section class="about" id="about"><canvas id="tunnel"></canvas>
+<div class="about-in"><h2 class="rv scr">Quem sou eu</h2>
+<p class="rv big">Apaixonado por desenvolvimento de software e por resolver problemas complexos.</p>
+<p class="rv big">Do front-end ao back-end, dos dados à automação: sempre aprendendo e melhorando.</p>
+<p class="rv big">Vamos transformar sua ideia em algo real?</p></div></section>
+<section class="areas" id="areas"><h2 class="rv scr">Áreas de atuação</h2><div class="panels">
+<article class="panel rv" data-cat="dados"><h3>Dados &amp; BI</h3><p>Transformar números em decisões: análise, dashboards e plataformas unificadas de dados.</p><b class="count" data-cat="dados">0</b><small>ferramentas</small></article>
+<article class="panel rv" data-cat="auto"><h3>Automação</h3><p>Apps e fluxos que eliminam trabalho repetitivo entre sistemas e pessoas.</p><b class="count" data-cat="auto">0</b><small>ferramentas</small></article>
+<article class="panel rv" data-cat="web"><h3>Front-end</h3><p>Interfaces responsivas, rápidas e com visual que chama atenção.</p><b class="count" data-cat="web">0</b><small>ferramentas</small></article>
+<article class="panel rv" data-cat="back"><h3>Back-end &amp; Bancos</h3><p>Do PHP e Python ao ERP Protheus, com MySQL e Oracle por baixo.</p><b class="count" data-cat="back">0</b><small>ferramentas</small></article>
+<article class="panel rv" data-cat="gestao"><h3>Gestão &amp; Suporte</h3><p>Times, processos ágeis, versionamento e anos de atendimento a clientes.</p><b class="count" data-cat="gestao">0</b><small>ferramentas</small></article>
+</div></section>
     <section class="projects-section" >
         <canvas class="bg-projects"></canvas>
         <h2 class="projects-section-header"  id="projects">Skills</h2>

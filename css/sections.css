@@ -1,0 +1,41 @@
+@media(max-width:1100px){.nav div.main_list ul li{padding-right:5rem!important}}
+/* utilitários */
+.rv{opacity:0;translate:0 50px;transition:opacity .9s ease,translate .9s cubic-bezier(.2,.8,.2,1)}
+.rv.vis{opacity:1;translate:0 0}
+#cur{position:fixed;left:0;top:0;width:34px;height:34px;margin:-17px 0 0 -17px;border:2px solid #fff;border-radius:50%;z-index:70;pointer-events:none;mix-blend-mode:difference;transition:width .25s,height .25s,margin .25s,background .25s}
+#cur.big{width:70px;height:70px;margin:-35px 0 0 -35px;background:#fff}
+/* marquee */
+.marquee{overflow:hidden;white-space:nowrap;padding:1.6rem 0;margin:-1rem 0;background:linear-gradient(90deg,#a855f7,#ff3d9a,#ffe600);color:#0d0b14;font:700 2.6rem Raleway,sans-serif;transform:skewY(-2deg);position:relative;z-index:3}
+.marquee .track{display:inline-block;animation:mq 40s linear infinite}
+@keyframes mq{to{transform:translateX(-50%)}}
+/* órbita 3D no hero */
+.orbit{position:absolute;left:50%;top:50%;width:0;height:0;transform-style:preserve-3d;transform:rotateX(-16deg);pointer-events:none}
+.ring{position:absolute;inset:0;transform-style:preserve-3d;animation:spin 26s linear infinite}
+@keyframes spin{to{transform:rotateY(360deg)}}
+.ring img{position:absolute;width:46px;height:46px;margin:-23px 0 0 -23px;border-radius:12px;background:rgba(255,255,255,.12);padding:5px;object-fit:contain;box-shadow:0 0 18px rgba(168,85,247,.8);transform:rotateY(calc(var(--i)*45deg)) translateZ(var(--r,270px))}
+@media(max-width:700px){.ring img{--r:190px;width:36px;height:36px;margin:-18px 0 0 -18px}}
+/* sobre + túnel */
+.about{position:relative;min-height:120vh;display:flex;align-items:center;justify-content:center;overflow:hidden;background:#07050d}
+#tunnel{position:absolute;inset:0;width:100%;height:100%}
+.about-in{position:relative;z-index:2;padding:0 2rem;text-align:center}
+.big{font-size:3.4rem;max-width:760px;margin:6rem auto;text-shadow:0 0 30px #000,0 0 12px #000;font-weight:300}
+.scr{font-size:6rem;text-shadow:0 0 30px rgba(168,85,247,.9)}
+/* áreas */
+.areas{padding:12rem 2rem;background:radial-gradient(ellipse at top,#1b1030,#0d0b14 70%)}
+.areas>h2{margin-bottom:7rem}
+.panels{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:2.6rem;max-width:1200px;margin:0 auto;perspective:900px}
+.panel{--rx:0;--ry:0;--mx:50%;--my:50%;position:relative;padding:3rem 2.4rem;border-radius:18px;transform-style:preserve-3d;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.15);backdrop-filter:blur(8px);
+ transform:rotateX(calc(var(--rx)*1deg)) rotateY(calc(var(--ry)*1deg));transition:transform .25s ease-out,opacity .9s,translate .9s,box-shadow .3s}
+.panel:hover{box-shadow:0 25px 60px rgba(168,85,247,.35)}
+.panel::after{content:'';position:absolute;inset:0;border-radius:18px;pointer-events:none;background:radial-gradient(260px circle at var(--mx) var(--my),rgba(255,255,255,.2),transparent 60%)}
+.panel h3{font-size:2.6rem;transform:translateZ(40px)}
+.panel p{margin:1.6rem 0;font-size:1.6rem;opacity:.85;transform:translateZ(25px)}
+.panel .count{display:block;font:700 7rem Raleway,sans-serif;transform:translateZ(70px);background:linear-gradient(90deg,#a855f7,#ffe600);-webkit-background-clip:text;background-clip:text;color:transparent}
+.panel small{display:block;text-align:center;text-transform:uppercase;letter-spacing:.3em;opacity:.6}
+/* filtros */
+.chips{display:flex;flex-wrap:wrap;gap:1rem;justify-content:center;margin:0 0 4rem;position:relative;z-index:2}
+.chip{font:inherit;font-size:1.6rem;color:#fff;padding:.8rem 2rem;border-radius:50px;cursor:pointer;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.25);transition:all .25s}
+.chip:hover,.chip.on{background:linear-gradient(90deg,#a855f7,#ff3d9a);border-color:transparent;transform:translateY(-3px);box-shadow:0 8px 24px rgba(168,85,247,.5)}
+html.js .col.off{opacity:.1!important;scale:.88;pointer-events:none}
+.col{transition:opacity .8s ease,transform .8s cubic-bezier(.2,.8,.2,1),scale .4s}
+.projects-section .title{margin-bottom:2.4rem;position:relative;z-index:2}
