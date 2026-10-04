@@ -1,0 +1,64 @@
+/* ===== base: nada de rolagem lateral, textos estáveis no celular ===== */
+body{overflow-x:hidden;-webkit-text-size-adjust:100%}
+.col,.chip,.contact-details,.gyro-btn{-webkit-tap-highlight-color:transparent}
+.welcome-section{height:100vh;height:100svh}
+
+/* ===== órbita 3D proporcional à tela (tablet e celular) ===== */
+.orbit{--r:clamp(170px,46vw,470px);--is:clamp(40px,6vw,64px)}
+.ring img{width:var(--is);height:var(--is);margin:calc(var(--is)/-2) 0 0 calc(var(--is)/-2);padding:calc(var(--is)/7)}
+
+/* ===== touch: sem "hover preso" ===== */
+@media(hover:none){
+  .col .container:hover{transform:none}
+  .contact-details:hover{transform:none}
+  .panel:hover{box-shadow:none}
+}
+
+/* ===== tablet ===== */
+@media(max-width:980px){
+  .projects-section{position:relative}
+  .bg-projects{top:0;left:0;height:100%!important}   /* fundo cobre a lista de cards inteira */
+  .areas{padding:9rem 2rem}
+}
+
+/* ===== celular ===== */
+@media(max-width:700px){
+  /* menu compacto */
+  .nav{height:52px;line-height:52px;padding:0}
+  .nav div.main_list,.nav div.main_list ul,.nav div.main_list ul li{height:52px}
+  .nav div.main_list ul li a{line-height:52px}
+  /* hero */
+  .gyro-btn{bottom:calc(6vh + env(safe-area-inset-bottom,0px));padding:1.2rem 2.6rem;font-size:1.7rem}
+  .marquee{font-size:2rem;padding:1.2rem 0}
+  /* sobre / áreas */
+  .about{min-height:100vh}
+  .big{font-size:2.6rem;margin:4rem auto}
+  .scr{font-size:4.2rem}
+  .areas{padding:7rem 1.6rem}
+  .areas>h2{margin-bottom:4rem}
+  .panel{padding:2.4rem 2rem}
+  .panel .count{font-size:6rem}
+  /* skills: 2 colunas, filtros roláveis */
+  .chips{flex-wrap:nowrap;overflow-x:auto;justify-content:flex-start;padding:0 1rem 1rem;scroll-snap-type:x proximity;scrollbar-width:none}
+  .chips::-webkit-scrollbar{display:none}
+  .chip{flex:0 0 auto;scroll-snap-align:start;font-size:1.7rem}
+  .projects-section-header{font-size:4rem}
+  .col{width:calc(50% - 1rem);margin:.5rem}
+  .front,.back{min-height:210px}
+  .inner{padding:1rem}
+  .front .inner p{font-size:1.7rem;margin-bottom:1rem}
+  /* contato */
+  .contact-section{height:auto;min-height:80vh;padding:8rem 1.6rem 6rem}
+  .contact-section-header>h2{font-size:3.6rem}
+  #coffe-container{margin:0 auto -100px;left:0;top:0;transform:scale(.62);transform-origin:top center}
+  .contact-links{flex-direction:column;align-items:stretch;margin-top:2rem}
+  .contact-details{font-size:1.9rem;margin:.6rem 0;text-align:center}
+}
+
+/* ===== celular deitado ===== */
+@media(max-height:520px) and (orientation:landscape){
+  .reflexcard{height:240px}
+  .reflexcard h1{font-size:2.6rem}
+  .orbit{--r:clamp(170px,30vw,300px)}
+  .gyro-btn{display:none}
+}

@@ -1,4 +1,4 @@
-.scene{perspective:30em;transform-style:preserve-3d}
+.scene{position:relative;perspective:1400px;transform-style:preserve-3d}
 .reflexcard{--rx:0;--ry:0;--mx:50%;--my:50%;height:360px;width:660px;max-width:92vw;border-radius:15px;position:relative;display:flex;justify-content:center;align-items:center;text-align:center;transform-style:preserve-3d;will-change:transform;
   transform:rotateX(calc(var(--rx)*1deg)) rotateY(calc(var(--ry)*1deg));
   background:linear-gradient(135deg,rgba(15,15,25,.6),rgba(70,25,100,.35)),url('../resources/cards/testgif.gif') center/cover;

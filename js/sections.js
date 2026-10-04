@@ -15,8 +15,8 @@
   // órbita 3D de ícones ao redor do cartão
   const card = $('#reflexcard');
   if (card) { const o = document.createElement('div'); o.className = 'orbit';
-    o.innerHTML = '<div class="ring">' + ['html', 'css', 'javascript', 'php', 'python', 'mysql', 'powerbi', 'git'].map((n, i) => `<img src="resources/cards/${n}.png" alt="" style="--i:${i}">`).join('') + '</div>';
-    card.appendChild(o); }
+    o.innerHTML = '<div class="ring">' + ['html', 'css', 'javascript', 'jquery', 'php', 'laravel', 'python', 'mysql', 'powerbi', 'powerapps', 'wordpress', 'git'].map((n, i) => `<img src="resources/cards/${n}.png" alt="" style="--i:${i}">`).join('') + '</div>';
+    $('.scene').appendChild(o); }
 
   // filtros por categoria
   const bar = Object.assign(document.createElement('div'), { className: 'chips' });
@@ -43,8 +43,8 @@
     (function f() { x += (tx - x) * .18; y += (ty - y) * .18; c.style.transform = `translate(${x}px,${y}px)`; requestAnimationFrame(f); })(); }
 
   // parallax do hero ao rolar
-  const scene = $('.scene');
-  addEventListener('scroll', () => { const y = Math.min(scrollY, innerHeight); scene.style.transform = `translateY(${y * .35}px) scale(${1 - y / 2200})`; scene.style.opacity = 1 - y / (innerHeight * 1.1); }, { passive: true });
+  const scene = $('.scene'), wrap = document.createElement('div'); scene.before(wrap); wrap.appendChild(scene);
+  addEventListener('scroll', () => { const y = Math.min(scrollY, innerHeight); scene.style.transform = `translateY(${y * .35}px) scale(${1 - y / 2200})`; wrap.style.opacity = 1 - y / (innerHeight * 1.1); }, { passive: true });
 
   // fundo de dados (canvas): grade, barras, linhas, rosca e tabela, tudo em movimento lento
   const cv = $('#tunnel'), g = cv.getContext('2d'), calm = matchMedia('(prefers-reduced-motion: reduce)').matches; let w, h, run = false; const m = { x: 0, y: 0, sx: 0, sy: 0 };

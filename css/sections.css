@@ -9,12 +9,12 @@
 .marquee .track{display:inline-block;animation:mq 40s linear infinite}
 @keyframes mq{to{transform:translateX(-50%)}}
 /* órbita 3D no hero */
-.orbit{--r:300px;position:absolute;left:50%;top:50%;width:0;height:0;transform-style:preserve-3d;transform:rotateX(-16deg);pointer-events:none}
-.ring{position:absolute;inset:0;transform-style:preserve-3d;animation:spin 26s linear infinite}
+.orbit{--r:470px;position:absolute;left:50%;top:50%;width:0;height:0;transform-style:preserve-3d;transform:rotateX(-14deg);pointer-events:none}
+.ring{position:absolute;inset:0;transform-style:preserve-3d;animation:spin 36s linear infinite}
 @keyframes spin{to{transform:rotateY(360deg)}}
 .ring::before{content:'';position:absolute;left:calc(var(--r)*-1);top:calc(var(--r)*-1);width:calc(var(--r)*2);height:calc(var(--r)*2);border-radius:50%;border:1px solid rgba(255,255,255,.3);box-shadow:0 0 40px rgba(168,85,247,.55),inset 0 0 40px rgba(168,85,247,.35);transform:rotateX(90deg)}
-.ring img{position:absolute;width:58px;height:58px;margin:-29px 0 0 -29px;border-radius:15px;background:rgba(22,12,38,.8);border:1px solid rgba(255,255,255,.35);padding:8px;object-fit:contain;box-shadow:0 0 26px rgba(168,85,247,.9),0 10px 24px rgba(0,0,0,.6);transform:rotateY(calc(var(--i)*45deg)) translateZ(var(--r))}
-@media(max-width:700px){.orbit{--r:200px}.ring img{width:44px;height:44px;margin:-22px 0 0 -22px;padding:6px}}
+.ring img{position:absolute;width:64px;height:64px;margin:-32px 0 0 -32px;border-radius:16px;background:rgba(22,12,38,.82);border:1px solid rgba(255,255,255,.35);padding:9px;object-fit:contain;box-shadow:0 0 26px rgba(168,85,247,.9),0 10px 24px rgba(0,0,0,.6);transform:rotateY(calc(var(--i)*30deg)) translateZ(var(--r))}
+@media(max-width:700px){.orbit{--r:195px}.ring img{width:44px;height:44px;margin:-22px 0 0 -22px;padding:6px}}
 /* sobre + túnel */
 .about{position:relative;min-height:120vh;display:flex;align-items:center;justify-content:center;overflow:hidden;background:#07050d}
 #tunnel{position:absolute;inset:0;width:100%;height:100%}
