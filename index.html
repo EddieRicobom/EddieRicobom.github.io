@@ -1,512 +1,188 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <script>document.documentElement.classList.add("js")</script>
-    <title>Eddie Ricobom</title>
-    <link rel="icon" type="image/x-icon" href="resources/favicon.ico">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0a0d13">
+  <meta name="description" content="Portfólio de Edson Ricobom: desenvolvimento de software, dados, BI e automação.">
+  <title>Edson Ricobom — Software, dados e automação</title>
+  <link rel="icon" type="image/x-icon" href="resources/favicon.ico">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="css/portfolio.css" rel="stylesheet">
+  <link href="css/hobbies.css" rel="stylesheet">
+  <script src="js/portfolio.js" defer></script>
+  <script src="js/hobbies.js" defer></script>
 </head>
-<script src="js/jquery-3.6.0.min.js" type="text/javascript"></script>
-
-<link href="css/basic.css" rel="stylesheet" />
-<link href="css/nav.css" rel="stylesheet" />
-<link href="css/coffee.css" rel="stylesheet" />
-<link href="css/parallaxCard.css" rel="stylesheet" />
-<link href="css/turnCards.css" rel="stylesheet" />
-<link href="css/effects.css" rel="stylesheet" />
-<link href="css/sections.css" rel="stylesheet" />
-<link href="css/hobbies.css" rel="stylesheet" />
-<script src="js/hobbies.js" defer></script>
-<link href="css/responsive.css" rel="stylesheet" />
-<script src="js/sections.js" defer></script>
-<script src="js/effects.js" defer></script>
-<script src="js/basic.js"></script>
-<script src="js/parallax_card.js"></script>
-<link href="https://fonts.googleapis.com/css?family=Poppins:200i,300,400&display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css?family=Raleway:700&display=swap" rel="stylesheet"/>
 <body>
-
-<div class="conteudo">
-    <nav class="nav">
-        <div class="container">
-            <div id="mainListDiv" class="main_list">
-                <ul class="navlinks">
-                    <li><a href="#about">Sobre</a></li>
-                    <li><a href="#areas">Áreas</a></li>
-                    <li><a href="#projects">Skills</a></li>
-                    <li><a href="#contact">Contato</a></li>
-                </ul>
-            </div>
-        </div>
+  <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+  <header class="site-header">
+    <nav class="nav-shell" aria-label="Navegação principal">
+      <a class="brand" href="#inicio" aria-label="Edson Ricobom, início"><span class="brand-mark">ER</span><span>Edson Ricobom</span></a>
+      <div class="nav-links">
+        <a href="#sobre">Sobre</a>
+        <a href="#atuacao">Atuação</a>
+        <a href="#competencias">Competências</a>
+        <a href="#contato">Contato</a>
+      </div>
+      <a class="nav-cta" href="mailto:edricobom@gmail.com">Vamos conversar <span aria-hidden="true">↗</span></a>
     </nav>
+  </header>
 
-
-    <section class="welcome-section" id="welcome-section">
-        <canvas id="welcome_bg" class="welcome-section bg bgwelcome">
-
-        </canvas>
-        <div class="scene">
-            <div class="reflexcard" id="reflexcard">
-                <div class="reflexcardcontent">
-                    <h1>Prazer, Edson! Vamos tornar suas ideias realidade?</h1>
-                </div>
-            </div>
-
+  <main id="conteudo">
+    <section class="hero section-wrap" id="inicio" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="eyebrow-line"></span> SOFTWARE · DADOS · AUTOMAÇÃO</p>
+        <h1 id="hero-title">Ideias claras.<br><span class="accent-text">Soluções que funcionam.</span></h1>
+        <p class="hero-lede">Prazer, sou <strong>Edson Ricobom</strong>. Desenvolvo software e transformo problemas complexos em soluções úteis, da análise de dados às aplicações web.</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#atuacao">Conheça minha atuação <span aria-hidden="true">↓</span></a>
+          <a class="button button-secondary" href="mailto:edricobom@gmail.com">Entre em contato <span aria-hidden="true">↗</span></a>
         </div>
-
-
+        <div class="hero-note"><span class="status-dot"></span> Aprendizado contínuo. Soluções construídas com propósito.</div>
+      </div>
+      <div class="hero-visual" aria-label="Ilustração abstrata de dados conectados a uma solução">
+        <div class="visual-topline"><span>FLUXO DE IDEIAS</span><span class="visual-live"><i></i> EM MOVIMENTO</span></div>
+        <svg class="flow-graphic" viewBox="0 0 520 430" role="img" aria-labelledby="flow-title flow-desc">
+          <title id="flow-title">Dados conectados a soluções</title>
+          <desc id="flow-desc">Três fontes se conectam a uma estrutura central e seguem para uma solução.</desc>
+          <defs>
+            <linearGradient id="flowLine" x1="0" x2="1"><stop stop-color="#8d70ff" stop-opacity=".18"/><stop offset=".52" stop-color="#a993ff"/><stop offset="1" stop-color="#68d9ec" stop-opacity=".45"/></linearGradient>
+            <linearGradient id="coreFill" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#24243a"/><stop offset="1" stop-color="#131b25"/></linearGradient>
+            <filter id="softGlow" x="-100%" y="-100%" width="300%" height="300%"><feGaussianBlur stdDeviation="7" result="blur"/><feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+          </defs>
+          <path class="flow-path" d="M104 112 C170 112 172 208 250 208 M104 215 H250 M104 318 C170 318 172 222 250 222 M335 215 C390 215 380 120 440 120 M335 215 C390 215 380 310 440 310"/>
+          <g class="source-node"><rect x="38" y="82" width="104" height="60" rx="12"/><circle cx="58" cy="108" r="5"/><path d="M72 103h48M72 113h34"/><text x="90" y="160">DADOS</text></g>
+          <g class="source-node"><rect x="38" y="185" width="104" height="60" rx="12"/><circle cx="58" cy="211" r="5"/><path d="M72 206h48M72 216h34"/><text x="90" y="263">PROCESSOS</text></g>
+          <g class="source-node"><rect x="38" y="288" width="104" height="60" rx="12"/><circle cx="58" cy="314" r="5"/><path d="M72 309h48M72 319h34"/><text x="90" y="366">IDEIAS</text></g>
+          <g class="core-node" filter="url(#softGlow)"><rect x="218" y="166" width="132" height="100" rx="22"/><path d="M263 207h42M263 222h28"/><circle cx="248" cy="207" r="4"/><circle cx="248" cy="222" r="4"/><text x="284" y="285">CONSTRUIR</text></g>
+          <g class="output-node"><rect x="398" y="88" width="91" height="64" rx="14"/><path d="M418 120l10 10 22-24"/><text x="443" y="169">INSIGHTS</text></g>
+          <g class="output-node"><rect x="398" y="278" width="91" height="64" rx="14"/><path d="M417 310h12v13h-12zM436 298h12v25h-12zM455 306h12v17h-12z"/><text x="443" y="359">PRODUTO</text></g>
+          <circle class="flow-orbit orbit-a" cx="286" cy="216" r="145"/><circle class="flow-orbit orbit-b" cx="286" cy="216" r="172"/>
+          <circle class="signal signal-a" cx="143" cy="162" r="3"/><circle class="signal signal-b" cx="377" cy="175" r="3"/><circle class="signal signal-c" cx="369" cy="257" r="3"/>
+        </svg>
+        <div class="visual-caption"><span>ANÁLISE</span><span class="caption-arrow">→</span><span>DESENVOLVIMENTO</span><span class="caption-arrow">→</span><span>IMPACTO</span></div>
+      </div>
+      <a class="scroll-cue" href="#sobre"><span></span> role para explorar</a>
     </section>
 
-
-
-    <section class="about" id="about"><canvas id="tunnel"></canvas>
-<div class="about-in"><h2 class="rv scr">Quem sou eu</h2>
-<p class="rv big">Apaixonado por desenvolvimento de software e por resolver problemas complexos.</p>
-<p class="rv big">Do front-end ao back-end, dos dados à automação: sempre aprendendo e melhorando.</p>
-<p class="rv big">Vamos transformar sua ideia em algo real?</p></div></section>
-<section class="areas" id="areas"><h2 class="rv scr">Áreas de atuação</h2><div class="panels">
-<article class="panel rv" data-cat="dados"><h3>Dados &amp; BI</h3><p>Transformar números em decisões: análise, dashboards e plataformas unificadas de dados.</p><b class="count" data-cat="dados">0</b><small>ferramentas</small></article>
-<article class="panel rv" data-cat="auto"><h3>Automação</h3><p>Apps e fluxos que eliminam trabalho repetitivo entre sistemas e pessoas.</p><b class="count" data-cat="auto">0</b><small>ferramentas</small></article>
-<article class="panel rv" data-cat="web"><h3>Front-end</h3><p>Interfaces responsivas, rápidas e com visual que chama atenção.</p><b class="count" data-cat="web">0</b><small>ferramentas</small></article>
-<article class="panel rv" data-cat="back"><h3>Back-end &amp; Bancos</h3><p>Do PHP e Python ao ERP Protheus, com MySQL e Oracle por baixo.</p><b class="count" data-cat="back">0</b><small>ferramentas</small></article>
-<article class="panel rv" data-cat="gestao"><h3>Gestão &amp; Suporte</h3><p>Times, processos ágeis, versionamento e anos de atendimento a clientes.</p><b class="count" data-cat="gestao">0</b><small>ferramentas</small></article>
-</div></section>
-    <section class="projects-section" >
-        <canvas class="bg-projects"></canvas>
-        <h2 class="projects-section-header"  id="projects">Skills</h2>
-        <h3 class="title">Dica: Toque nos cards para ver mais informações</h3>
-
-        <div class="wrapper">
-            <div class="cols">
-                <div class="col">
-                    <div class="container">
-                        <div class="front favorite" style="background-image: url('resources/cards/analise.png')">
-                            <div class="inner">
-                                <p>ANÁLISE</p>
-                            </div>
-                        </div>
-                        <div class="back favorite">
-                            <div class="inner">
-                                <p>Explorar e interpretar dados para gerar insights e apoiar decisões</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col">
-                    <div class="container">
-                        <div class="front favorite" style="background-image: url('resources/cards/fabric.png')">
-                            <div class="inner">
-                                <p>FABRIC</p>
-                            </div>
-                        </div>
-                        <div class="back favorite">
-                            <div class="inner">
-                                <p>Plataforma unificada de dados da Microsoft que integra engenharia, ciência e BI</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col">
-                    <div class="container">
-                        <div class="front favorite" style="background-image: url('resources/cards/powerapps.png')">
-                            <div class="inner">
-                                <p>POWER APPS</p>
-                            </div>
-                        </div>
-                        <div class="back favorite">
-                            <div class="inner">
-                                <p>Criar aplicativos personalizados com alta compatibilidade para automatizar processos</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col">
-                    <div class="container">
-                        <div class="front favorite" style="background-image: url('resources/cards/powerbi.png')">
-                            <div class="inner">
-                                <p>POWER BI</p>
-                            </div>
-                        </div>
-                        <div class="back favorite">
-                            <div class="inner">
-                                <p>Visualizar dados em dashboards interativos e relatórios dinâmicos</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col">
-                    <div class="container">
-                        <div class="front favorite" style="background-image: url('resources/cards/powerautomate.png')">
-                            <div class="inner">
-                                <p>POWER AUTOMATE</p>
-                            </div>
-                        </div>
-                        <div class="back favorite">
-                            <div class="inner">
-                                <p>Automatizar tarefas e fluxos de trabalho entre sistemas e serviços</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="container">
-                        <div class="front favorite" style="background-image: url('resources/cards/suporte.png')">
-                            <div class="inner">
-                                <p>SUPORTE</p>
-                            </div>
-                        </div>
-                        <div class="back favorite">
-                            <div class="inner">
-                                <p>Anos de administração empresarial e atendimento de clientes</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="container">
-                        <div class="front favorite" style="background-image: url('resources/cards/office.png')">
-                            <div class="inner">
-                                <p>MICROSOFT OFFICE</p>
-                            </div>
-                        </div>
-                        <div class="back favorite">
-                            <div class="inner">
-                                <p>Word, Excel, Powerpoint e Outlook, ótimas ferramentas para qualquer funcionário</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="container">
-                        <div class="front favorite" style="background-image: url('resources/cards/html.png')">
-                            <div class="inner">
-                                <p>HTML5</p>
-                            </div>
-                        </div>
-                        <div class="back favorite">
-                            <div class="inner">
-                                <p>A última evolução do padrão que define HTML, o melhor amigo do desenvolvedor web</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col">
-                    <div class="container">
-                        <div class="front favorite" style="background-image: url('resources/cards/css.png')">
-                            <div class="inner">
-                                <p>CSS3</p>
-                            </div>
-                        </div>
-                        <div class="back favorite">
-                            <div class="inner">
-                                <p>De visuais chamativos a layouts funcionais e responsivos. Se você consegue imaginar como seria seu site dos sonhos, então eu posso dar vida a ele</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="container">
-                        <div class="front favorite" style="background-image: url('resources/cards/javascript.png')">
-                            <div class="inner">
-                                <p>JAVASCRIPT</p>
-                            </div>
-                        </div>
-                        <div class="back favorite">
-                            <div class="inner">
-                                <p>Ação e reação, manipulações de elementos na hora e soluções responsivas rápidas para seus problemas web</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="container">
-                        <div class="front favorite" style="background-image: url('resources/cards/jquery.png')">
-                            <div class="inner">
-                                <p>JQUERY</p>
-                            </div>
-                        </div>
-                        <div class="back favorite">
-                            <div class="inner">
-                                <p>JQuery é uma biblioteca JavaScript rápida e rica em recursos. Ela torna coisas rotineiras muito mais simples e robustas</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="container ">
-                        <div class="front favorite" style="background-image: url('resources/cards/php.png')">
-                            <div class="inner">
-                                <p>PHP</p>
-                            </div>
-                        </div>
-                        <div class="back favorite">
-                            <div class="inner">
-                                <p>Meu favorito pessoal, PHP, o bom e velho coração de qualquer ótimo site. HTML, CSS, JAVASCRIPT, JQUERY, MANIPULAÇÃO DE BANCO DE DADOS, tudo em um só lugar</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="container ">
-                        <div class="front favorite" style="background-image: url('resources/cards/wordpress.png')">
-                            <div class="inner">
-                                <p>WORDPRESS</p>
-                            </div>
-                        </div>
-                        <div class="back favorite">
-                            <div class="inner">
-                                <p>Criação de sites de forma rápida e simples</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="container ">
-                        <div class="front favorite" style="background-image: url('resources/cards/laravel.png')">
-                            <div class="inner">
-                                <p>LARAVEL</p>
-                            </div>
-                        </div>
-                        <div class="back favorite">
-                            <div class="inner">
-                                <p>Framework sólido para PHP, uma ferramenta poderosa com excelentes funções de backend </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="container ">
-                        <div class="front favorite" style="background-image: url('resources/cards/python.png')">
-                            <div class="inner">
-                                <p>Python</p>
-                            </div>
-                        </div>
-                        <div class="back favorite">
-                            <div class="inner">
-                                <p>Python é uma linguagem de programação popular e versátil usada para desenvolvimento web, análise de dados, IA e muito mais.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="container ">
-                        <div class="front favorite" style="background-image: url('resources/cards/protheus.png')">
-                            <div class="inner">
-                                <p>ADVPL</p>
-                            </div>
-                        </div>
-                        <div class="back favorite">
-                            <div class="inner">
-                                <p>Protheus, Software ERP desenvolvido pela TOTVS, amplamente utilizado para gerenciar diversos processos de negócios, como finanças,recursos humanos, estoque e manufatura</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="container favorite">
-                        <div class="front" style="background-image: url('resources/cards/xampp.png')">
-                            <div class="inner">
-                                <p>XAMPP</p>
-                            </div>
-                        </div>
-                        <div class="back favorite">
-                            <div class="inner">
-                                <p>O PHP é ótimo, mas ainda precisa de uma boa configuração prévia para executar e manter, e é aí que eu entro para configurar e ajustá-lo</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="container">
-                        <div class="front favorite" style="background-image: url('resources/cards/mysql.png')">
-
-                            <div class="inner">
-                                <p>MYSQL</p>
-                            </div>
-                        </div>
-                        <div class="back favorite">
-                            <div class="inner">
-                                <p>Seus dados armazenados e facilmente analisados com manipulação de dados rápida e confiável</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="container ">
-                        <div class="front favorite" style="background-image: url('resources/cards/oracle.png')">
-                            <div class="inner">
-                                <p>ORACLE</p>
-                            </div>
-                        </div>
-                        <div class="back favorite">
-                            <div class="inner">
-                                <p>O Oracle é uma arquitetura de banco de dados relacional totalmente escalável e é frequentemente usado por empresas globais.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="container ">
-                        <div class="front favorite" style="background-image: url('resources/cards/git.png')">
-                            <div class="inner">
-                                <p>GIT</p>
-                            </div>
-                        </div>
-                        <div class="back favorite">
-                            <div class="inner">
-                                <p>A melhor maneira de gerenciar qualquer projeto com velocidade e eficiência</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="container">
-                        <div class="front" style="background-image: url('resources/cards/stash.png')">
-                            <div class="inner">
-                                <p>STASH-GIT</p>
-                            </div>
-                        </div>
-                        <div class="back">
-                            <div class="inner">
-                                <p>Um antigo gerenciador de repositório local GIT e visualizador de branches com uma visualização de árvore incrível</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="container">
-                        <div class="front" style="background-image: url('resources/cards/jira.png')">
-                            <div class="inner">
-                                <p>JIRA</p>
-                            </div>
-                        </div>
-                        <div class="back">
-                            <div class="inner">
-                                <p>Plataforma de gerenciamento de projetos e rastreamentos de problemas que permite às equipes colaborarem em seu dia-a-dia</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="container">
-                        <div class="front" style="background-image: url('resources/cards/scrum.png')">
-                            <div class="inner">
-                                <p>SCRUM</p>
-                            </div>
-                        </div>
-                        <div class="back">
-                            <div class="inner">
-                                <p>Framework ágil de desenvolvimento, entrega e manutenção de produtos complexos, com ênfase em eficiência, flexibilidade e transparência para a equipe</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="container">
-                        <div class="front" style="background-image: url('resources/cards/manager.png')">
-                            <div class="inner">
-                                <p>GERENCIAMENTO</p>
-                            </div>
-                        </div>
-                        <div class="back">
-                            <div class="inner">
-                                <p>Reestruturação de sistemas com décadas de existência, gerenciamento de equipes e treinamento de estagiários</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="container">
-                        <div class="front" style="background-image: url('resources/cards/unity.png')">
-                            <div class="inner">
-                                <p>UNITY</p>
-                            </div>
-                        </div>
-                        <div class="back">
-                            <div class="inner">
-                                <p>Muitos projetos como hobby, com foco principal em recursos de RA, mas principalmente usados para treinar C# e gerenciamento de classes</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+    <section class="about section-wrap section-space" id="sobre" aria-labelledby="about-title">
+      <div class="section-heading" data-reveal>
+        <p class="eyebrow"><span class="eyebrow-line"></span> SOBRE</p>
+        <h2 id="about-title">Curiosidade técnica.<br><span class="muted-heading">Olhar para o todo.</span></h2>
+      </div>
+      <div class="about-layout">
+        <div class="about-copy" data-reveal>
+          <p class="about-lede">Sou apaixonado por desenvolvimento de software e por resolver problemas complexos.</p>
+          <p>Transito entre front-end, back-end, dados e automação, conectando tecnologia às necessidades de pessoas e processos. Estou sempre aprendendo e buscando maneiras melhores de construir.</p>
         </div>
-
-    </section>
-    <!-- FIM DA SEÇÃO DE PROJETOS -->
-
-    <!-- INÍCIO DA SEÇÃO DE CONTATO -->
-
-    <section class="contact-section" id="contact">
-
-        <div class="contact-section-header">
-            <h2>Vamos tomar um café e trocar ideias?</h2>
-            <br>
-            <div id="coffe-container" >
-                <div class="steam" id="steam1"> </div>
-                <div class="steam" id="steam2"> </div>
-                <div class="steam" id="steam3"> </div>
-                <div class="steam" id="steam4"> </div>
-
-                <div id="cup">
-                    <div id="cup-body">
-                        <div id="cup-shade"></div>
-                    </div>
-                    <div id="cup-handle"></div>
-                </div>
-
-                <div id="saucer"></div>
-
-                <div id="shadow"></div>
-            </div>
+        <div class="approach-list" data-reveal>
+          <div class="approach-item"><span class="approach-index">01</span><div><h3>Entender o problema</h3><p>Ouvir, investigar e encontrar o que realmente precisa melhorar.</p></div><span class="approach-symbol" aria-hidden="true">⌕</span></div>
+          <div class="approach-item"><span class="approach-index">02</span><div><h3>Conectar as peças</h3><p>Dados, sistemas e pessoas trabalhando em conjunto.</p></div><span class="approach-symbol" aria-hidden="true">⟷</span></div>
+          <div class="approach-item"><span class="approach-index">03</span><div><h3>Construir com propósito</h3><p>Soluções claras, úteis e pensadas para o dia a dia.</p></div><span class="approach-symbol" aria-hidden="true">↗</span></div>
         </div>
-        <br>
-        <div class="contact-links">
-            <a
-                    class="btn contact-details"
-                    id="profile-link"
-                    href="https://www.linkedin.com/in/edson-da-silva-ricobom-7000ab203/"
-                    target="_blank"
-            ><i class="fab fa-github"></i> Linkedin</a
-            >
-
-            <a class="btn contact-details" href="mailto:edricobom@gmail.com"
-            ><i class="fas fa-at"></i> Enviar um e-mail</a
-            >
-
-            <a class="btn contact-details" href="mailto:edricobom@gmail.com"
-            ><i class="fas fa-at"></i> Sugestão | Reportar um problema no layout</a
-            >
-        </div>
+      </div>
     </section>
 
-    <section class="hobbies" id="hobbies">
-        <button class="secret" id="secret" aria-expanded="false"><span>⚙</span> psiu… tem mais coisa escondida aqui</button>
-        <div class="hob" id="hob"><div>
-            <h2 class="rv scr">Hobbies e paixões</h2>
-            <p class="hob-sub">Quando o código descansa, a bancada, a Pokédex, os gatos e os games assumem.</p>
-            <div class="tabs"><button class="tab on" data-t="mechs">🤖 Modelismo de Mechs</button><button class="tab" data-t="pk">⚡ Pokémon</button><button class="tab" data-t="cats">🐱 Gatos</button><button class="tab" data-t="games">🎮 Games</button></div>
-            <div class="tp on" id="mechs"></div><div class="tp" id="pk"></div><div class="tp" id="cats"></div><div class="tp" id="games"></div>
-        </div></div>
+    <section class="work section-space" id="atuacao" aria-labelledby="work-title">
+      <div class="section-wrap">
+        <div class="section-heading section-heading-row" data-reveal>
+          <div><p class="eyebrow"><span class="eyebrow-line"></span> NO QUE POSSO CONTRIBUIR</p><h2 id="work-title">Tecnologia conectada<br><span class="muted-heading">a desafios reais.</span></h2></div>
+          <p class="section-intro">Da informação à aplicação, cada área ajuda a transformar uma necessidade em um próximo passo concreto.</p>
+        </div>
+        <div class="area-grid">
+          <article class="area-card area-featured" data-reveal><span class="area-number">01 / DADOS</span><div class="area-icon" aria-hidden="true"><svg viewBox="0 0 40 40"><path d="M7 31V20m9 11V10m9 21V16m9 15V7M4 34h32"/></svg></div><h3>Dados &amp; BI</h3><p>Organizar dados e criar análises e dashboards que apoiem decisões melhores.</p><a href="#competencias" class="text-link">Explorar competências <span aria-hidden="true">↗</span></a></article>
+          <article class="area-card" data-reveal><span class="area-number">02 / FLUXOS</span><div class="area-icon" aria-hidden="true"><svg viewBox="0 0 40 40"><rect x="5" y="7" width="12" height="10" rx="3"/><rect x="23" y="23" width="12" height="10" rx="3"/><path d="M17 12h5a4 4 0 0 1 4 4v3a4 4 0 0 0 4 4h1"/></svg></div><h3>Automação</h3><p>Reduzir tarefas repetitivas com aplicativos e fluxos entre sistemas.</p><a href="#competencias" class="text-link">Explorar competências <span aria-hidden="true">↗</span></a></article>
+          <article class="area-card" data-reveal><span class="area-number">03 / INTERFACES</span><div class="area-icon" aria-hidden="true"><svg viewBox="0 0 40 40"><rect x="5" y="7" width="30" height="26" rx="4"/><path d="M5 14h30M11 10.5h.1M15 10.5h.1M12 22l4 4-4 4m9 0h7"/></svg></div><h3>Front-end</h3><p>Criar interfaces responsivas, funcionais e agradáveis de usar.</p><a href="#competencias" class="text-link">Explorar competências <span aria-hidden="true">↗</span></a></article>
+          <article class="area-card" data-reveal><span class="area-number">04 / SISTEMAS</span><div class="area-icon" aria-hidden="true"><svg viewBox="0 0 40 40"><ellipse cx="20" cy="10" rx="12" ry="5"/><path d="M8 10v19c0 3 5 5 12 5s12-2 12-5V10M8 19c0 3 5 5 12 5s12-2 12-5"/></svg></div><h3>Back-end &amp; bancos</h3><p>Desenvolver lógica de aplicações e trabalhar com bancos de dados e ERP.</p><a href="#competencias" class="text-link">Explorar competências <span aria-hidden="true">↗</span></a></article>
+          <article class="area-card" data-reveal><span class="area-number">05 / PESSOAS</span><div class="area-icon" aria-hidden="true"><svg viewBox="0 0 40 40"><circle cx="15" cy="13" r="5"/><circle cx="27" cy="15" r="4"/><path d="M5 33v-3a10 10 0 0 1 20 0v3zm21-11a7 7 0 0 1 9 7v4h-6"/></svg></div><h3>Gestão &amp; suporte</h3><p>Apoiar equipes, processos e atendimento com comunicação e organização.</p><a href="#competencias" class="text-link">Explorar competências <span aria-hidden="true">↗</span></a></article>
+        </div>
+      </div>
     </section>
 
-    <!-- END CONTACT SECTION -->
+    <section class="skills section-wrap section-space" id="competencias" aria-labelledby="skills-title">
+      <div class="section-heading section-heading-row" data-reveal>
+        <div><p class="eyebrow"><span class="eyebrow-line"></span> CAIXA DE FERRAMENTAS</p><h2 id="skills-title">Competências para<br><span class="muted-heading">tirar ideias do papel.</span></h2></div>
+        <p class="section-intro">Tecnologias e práticas presentes no meu repertório, agrupadas para você encontrar cada área com facilidade.</p>
+      </div>
+      <div class="skill-filters" role="group" aria-label="Filtrar competências" data-reveal>
+        <button class="skill-filter is-active" type="button" data-filter="all" aria-pressed="true">Todas</button>
+        <button class="skill-filter" type="button" data-filter="dados" aria-pressed="false">Dados &amp; BI</button>
+        <button class="skill-filter" type="button" data-filter="automacao" aria-pressed="false">Automação</button>
+        <button class="skill-filter" type="button" data-filter="web" aria-pressed="false">Web</button>
+        <button class="skill-filter" type="button" data-filter="sistemas" aria-pressed="false">Sistemas &amp; bancos</button>
+        <button class="skill-filter" type="button" data-filter="ferramentas" aria-pressed="false">Ferramentas &amp; práticas</button>
+      </div>
+      <div class="skills-grid" aria-live="polite">
+        <article class="skill-item" data-category="dados"><img src="resources/cards/analise.png" alt="" loading="lazy"><div><h3>Análise de dados</h3><p>Exploração e interpretação</p></div></article>
+        <article class="skill-item" data-category="dados"><img src="resources/cards/fabric.png" alt="" loading="lazy"><div><h3>Microsoft Fabric</h3><p>Plataforma de dados</p></div></article>
+        <article class="skill-item" data-category="dados"><img src="resources/cards/powerbi.png" alt="" loading="lazy"><div><h3>Power BI</h3><p>Dashboards e relatórios</p></div></article>
+        <article class="skill-item" data-category="automacao"><img src="resources/cards/powerapps.png" alt="" loading="lazy"><div><h3>Power Apps</h3><p>Aplicativos de negócio</p></div></article>
+        <article class="skill-item" data-category="automacao"><img src="resources/cards/powerautomate.png" alt="" loading="lazy"><div><h3>Power Automate</h3><p>Fluxos de trabalho</p></div></article>
+        <article class="skill-item" data-category="web"><img src="resources/cards/html.png" alt="" loading="lazy"><div><h3>HTML5</h3><p>Estrutura web</p></div></article>
+        <article class="skill-item" data-category="web"><img src="resources/cards/css.png" alt="" loading="lazy"><div><h3>CSS3</h3><p>Estilo e responsividade</p></div></article>
+        <article class="skill-item" data-category="web"><img src="resources/cards/javascript.png" alt="" loading="lazy"><div><h3>JavaScript</h3><p>Interatividade web</p></div></article>
+        <article class="skill-item" data-category="web"><img src="resources/cards/jquery.png" alt="" loading="lazy"><div><h3>jQuery</h3><p>Biblioteca JavaScript</p></div></article>
+        <article class="skill-item" data-category="web"><img src="resources/cards/wordpress.png" alt="" loading="lazy"><div><h3>WordPress</h3><p>Criação de sites</p></div></article>
+        <article class="skill-item" data-category="sistemas"><img src="resources/cards/php.png" alt="" loading="lazy"><div><h3>PHP</h3><p>Desenvolvimento back-end</p></div></article>
+        <article class="skill-item" data-category="sistemas"><img src="resources/cards/laravel.png" alt="" loading="lazy"><div><h3>Laravel</h3><p>Framework PHP</p></div></article>
+        <article class="skill-item" data-category="sistemas"><img src="resources/cards/python.png" alt="" loading="lazy"><div><h3>Python</h3><p>Linguagem de programação</p></div></article>
+        <article class="skill-item" data-category="sistemas"><img src="resources/cards/protheus.png" alt="" loading="lazy"><div><h3>ADVPL / Protheus</h3><p>ERP e desenvolvimento</p></div></article>
+        <article class="skill-item" data-category="sistemas"><img src="resources/cards/mysql.png" alt="" loading="lazy"><div><h3>MySQL</h3><p>Banco de dados</p></div></article>
+        <article class="skill-item" data-category="sistemas"><img src="resources/cards/oracle.png" alt="" loading="lazy"><div><h3>Oracle</h3><p>Banco de dados</p></div></article>
+        <article class="skill-item" data-category="sistemas"><img src="resources/cards/xampp.png" alt="" loading="lazy"><div><h3>XAMPP</h3><p>Ambiente local PHP</p></div></article>
+        <article class="skill-item" data-category="ferramentas"><img src="resources/cards/git.png" alt="" loading="lazy"><div><h3>Git</h3><p>Versionamento</p></div></article>
+        <article class="skill-item" data-category="ferramentas"><img src="resources/cards/jira.png" alt="" loading="lazy"><div><h3>Jira</h3><p>Gestão de projetos</p></div></article>
+        <article class="skill-item" data-category="ferramentas"><img src="resources/cards/scrum.png" alt="" loading="lazy"><div><h3>Scrum</h3><p>Prática ágil</p></div></article>
+        <article class="skill-item" data-category="ferramentas"><img src="resources/cards/manager.png" alt="" loading="lazy"><div><h3>Gestão de equipes</h3><p>Processos e colaboração</p></div></article>
+        <article class="skill-item" data-category="ferramentas"><img src="resources/cards/suporte.png" alt="" loading="lazy"><div><h3>Suporte</h3><p>Atendimento e administração</p></div></article>
+        <article class="skill-item" data-category="ferramentas"><img src="resources/cards/office.png" alt="" loading="lazy"><div><h3>Microsoft Office</h3><p>Word, Excel, PowerPoint e Outlook</p></div></article>
+        <article class="skill-item" data-category="ferramentas"><img src="resources/cards/unity.png" alt="" loading="lazy"><div><h3>Unity</h3><p>Projetos pessoais e C#</p></div></article>
+        <article class="skill-item" data-category="ferramentas"><span class="skill-monogram" aria-hidden="true">C#</span><div><h3>C#</h3><p>Prática com projetos pessoais</p></div></article>
+        <article class="skill-item" data-category="ferramentas"><img src="resources/cards/stash.png" alt="" loading="lazy"><div><h3>Stash / Git</h3><p>Repositórios e branches</p></div></article>
+      </div>
+    </section>
 
-    <!-- START FOOTER SECTION -->
+    <section class="contact section-space" id="contato" aria-labelledby="contact-title">
+      <div class="section-wrap contact-layout">
+        <div class="contact-copy" data-reveal>
+          <p class="eyebrow"><span class="eyebrow-line"></span> CONTATO</p>
+          <h2 id="contact-title">Uma boa conversa<br>pode ser o <span class="accent-text">começo.</span></h2>
+          <p>Tem uma ideia, um desafio ou quer trocar experiências? Vai ser um prazer conversar.</p>
+          <div class="contact-actions">
+            <a class="button button-primary" href="mailto:edricobom@gmail.com">Enviar um e-mail <span aria-hidden="true">↗</span></a>
+            <a class="button button-secondary" href="https://www.linkedin.com/in/edson-da-silva-ricobom-7000ab203/" target="_blank" rel="noopener noreferrer">Conectar no LinkedIn <span aria-hidden="true">↗</span></a>
+          </div>
+          <a class="email-link" href="mailto:edricobom@gmail.com">edricobom@gmail.com</a>
+          <a class="github-link" href="https://github.com/EddieRicobom" target="_blank" rel="noopener noreferrer">Ver meu GitHub <span aria-hidden="true">↗</span></a>
+        </div>
+        <div class="coffee-art" aria-hidden="true" data-reveal>
+          <div class="coffee-orbit orbit-one"></div><div class="coffee-orbit orbit-two"></div>
+          <div class="coffee-glow"></div>
+          <svg viewBox="0 0 300 280" class="coffee-illustration"><defs><linearGradient id="cupPaint" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#ddd7ff"/><stop offset="1" stop-color="#8b77ee"/></linearGradient><linearGradient id="coffeePaint" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#6b4d38"/><stop offset="1" stop-color="#30251f"/></linearGradient></defs><ellipse cx="148" cy="228" rx="105" ry="18" fill="#05070b" opacity=".55"/><path d="M86 105h126l-12 91c-2 16-14 27-30 27h-42c-16 0-28-11-30-27z" fill="url(#cupPaint)"/><ellipse cx="149" cy="106" rx="63" ry="15" fill="#f1edff"/><ellipse cx="149" cy="108" rx="50" ry="9" fill="url(#coffeePaint)"/><path d="M212 125h13c37 0 33 54-4 57h-11" fill="none" stroke="#a89be9" stroke-width="12"/><path d="M116 82c-14-17 8-23-2-39m33 39c-14-17 8-23-2-39m32 39c-14-17 8-23-2-39" fill="none" stroke="#ab9afa" stroke-width="3" stroke-linecap="round" opacity=".65"/><path d="M105 125h7m-5 13h5" stroke="#fff" stroke-width="3" stroke-linecap="round" opacity=".65"/></svg>
+          <span class="coffee-label label-top">PAUSA PARA PENSAR</span><span class="coffee-label label-bottom">IDEIAS EM BOA COMPANHIA</span>
+        </div>
+      </div>
+    </section>
 
-    <footer>
-        <p>
-        </p>
-    </footer>
+    <section class="hobbies" id="hobbies" aria-label="Hobbies e paixões">
+      <button class="secret" id="secret" aria-expanded="false" aria-controls="hob"><span aria-hidden="true">✳</span> Um pouco além do código</button>
+      <div class="hob" id="hob"><div>
+        <div class="section-wrap hobbies-inner">
+          <h2 class="rv scr">Hobbies e paixões</h2>
+          <p class="hob-sub">Quando o código descansa, a bancada e a Pokédex assumem.</p>
+          <div class="tabs" role="tablist" aria-label="Hobbies">
+            <button class="tab on" id="tab-mechs" role="tab" aria-selected="true" aria-controls="mechs" data-t="mechs">🤖 Modelismo de Mechs</button>
+            <button class="tab" id="tab-pk" role="tab" aria-selected="false" aria-controls="pk" data-t="pk">⚡ Pokémon</button>
+          </div>
+          <div class="tp on" id="mechs" role="tabpanel" aria-labelledby="tab-mechs"></div>
+          <div class="tp" id="pk" role="tabpanel" aria-labelledby="tab-pk"></div>
+        </div>
+      </div></div>
+    </section>
+  </main>
 
-    <!-- END FOOTER SECTION -->
-</div>
-
+  <footer class="site-footer"><div class="section-wrap footer-inner"><a class="brand" href="#inicio"><span class="brand-mark">ER</span><span>Edson Ricobom</span></a><p>Software, dados e ideias em movimento.</p><a class="back-top" href="#inicio">Voltar ao início ↑</a></div></footer>
 </body>
 </html>
